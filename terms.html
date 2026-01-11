@@ -13,13 +13,21 @@
             line-height: 1.7;
         }
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
         }
         .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .header p { opacity: 0.9; font-size: 1.1rem; }
+        .beta-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -33,7 +41,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
         h2 {
-            color: #667eea;
+            color: #FF6B35;
             font-size: 1.5rem;
             margin-bottom: 20px;
             padding-bottom: 10px;
@@ -51,8 +59,8 @@
         }
         li { margin-bottom: 10px; }
         .highlight {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            border-left: 4px solid #667eea;
+            background: linear-gradient(135deg, #FF8C4215 0%, #FF6B3515 100%);
+            border-left: 4px solid #FF6B35;
             padding: 20px;
             border-radius: 0 12px 12px 0;
             margin: 20px 0;
@@ -64,10 +72,17 @@
             border-radius: 0 12px 12px 0;
             margin: 20px 0;
         }
+        .danger {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            color: #667eea;
+            color: #FF6B35;
             text-decoration: none;
             font-weight: 600;
         }
@@ -78,12 +93,14 @@
             font-size: 0.9rem;
             margin-top: 40px;
         }
+        a { color: #FF6B35; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Terms and Conditions</h1>
         <p>Sun-i Document Scanner</p>
+        <span class="beta-badge">BETA VERSION</span>
     </div>
 
     <div class="container">
@@ -97,15 +114,75 @@
         </div>
 
         <div class="card">
+            <h2>Beta Version Notice</h2>
+            <div class="warning">
+                <strong>Sun-i is currently in Beta.</strong> This means:
+                <ul style="margin-top: 10px;">
+                    <li>The app may contain bugs or errors</li>
+                    <li>Features may change or be removed</li>
+                    <li>Service interruptions may occur</li>
+                    <li>We appreciate your feedback to help improve the app</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
             <h2>Description of Service</h2>
             <p>Sun-i is a mobile application that provides:</p>
             <ul>
                 <li>Document scanning using your device's camera</li>
                 <li>Image enhancement and processing</li>
-                <li>AI-powered document analysis and insights</li>
+                <li>AI-powered document analysis using Google Gemini</li>
                 <li>Local document storage and organization</li>
                 <li>PDF export functionality</li>
             </ul>
+        </div>
+
+        <div class="card">
+            <h2>AI Analysis Service</h2>
+            <div class="danger">
+                <strong>IMPORTANT DISCLAIMER:</strong> The AI-powered document analysis feature is provided for <strong>informational purposes only</strong>.
+            </div>
+
+            <h3>What You Should Know:</h3>
+            <ul>
+                <li>Documents are sent to Google's Gemini AI for analysis</li>
+                <li>AI analysis may contain errors, inaccuracies, or omissions</li>
+                <li>Analysis results should NOT be considered legal, financial, medical, or professional advice</li>
+                <li>Always consult qualified professionals for important decisions</li>
+                <li>We are not responsible for decisions made based on AI analysis</li>
+            </ul>
+
+            <h3>AI Limitations:</h3>
+            <ul>
+                <li>May misinterpret document content</li>
+                <li>May miss important clauses or information</li>
+                <li>May provide incorrect summaries or risk assessments</li>
+                <li>Cannot replace professional legal or financial review</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Data Processing</h2>
+            <h3>What Happens to Your Documents:</h3>
+            <ol>
+                <li>You scan or upload a document</li>
+                <li>Document is sent securely to Google Gemini AI for analysis</li>
+                <li>Analysis results are returned and stored locally on your device</li>
+                <li>Original documents remain on your device</li>
+            </ol>
+            <p>By using the AI analysis feature, you consent to your document data being processed by Google's Gemini AI service according to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+        </div>
+
+        <div class="card">
+            <h2>Analytics and Tracking</h2>
+            <p>Sun-i uses Firebase Analytics to:</p>
+            <ul>
+                <li>Track app usage and feature adoption</li>
+                <li>Monitor app performance and crashes</li>
+                <li>Improve user experience</li>
+            </ul>
+            <p>Analytics data is collected anonymously and does not include your document content. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
         </div>
 
         <div class="card">
@@ -122,119 +199,116 @@
             <p>You agree to:</p>
             <ul>
                 <li>Use the App only for lawful purposes</li>
-                <li>Not scan or process documents that you do not have the right to access</li>
-                <li>Not use the App to infringe on others' intellectual property rights</li>
-                <li>Not attempt to reverse engineer, decompile, or disassemble the App</li>
-                <li>Not use the App for any fraudulent or illegal activities</li>
+                <li>Not scan documents you do not have the right to access</li>
+                <li>Not use the App for fraudulent or illegal activities</li>
+                <li>Not attempt to reverse engineer or decompile the App</li>
+                <li>Not rely solely on AI analysis for important decisions</li>
+                <li>Verify AI analysis results with qualified professionals when needed</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Document Scanning and Analysis</h2>
-            <h3>Your Documents</h3>
-            <p>You retain all rights to the documents you scan using the App. Sun-i does not claim any ownership over your content.</p>
-
-            <h3>AI Analysis Disclaimer</h3>
-            <div class="warning">
-                <strong>Important:</strong> The AI-powered document analysis feature is provided for informational purposes only. It should not be considered as legal, financial, or professional advice. Always consult with qualified professionals for important decisions regarding your documents.
-            </div>
-
-            <p>The AI analysis may:</p>
+            <h2>Your Documents</h2>
+            <p>You retain all rights to documents you scan. Sun-i does not claim ownership over your content.</p>
+            <p><strong>Your Responsibilities:</strong></p>
             <ul>
-                <li>Contain errors or inaccuracies</li>
-                <li>Miss important information in your documents</li>
-                <li>Provide general guidance that may not apply to your specific situation</li>
+                <li>Back up important documents separately</li>
+                <li>Deleting the app removes all locally stored data</li>
+                <li>We are not responsible for data loss</li>
             </ul>
         </div>
 
         <div class="card">
             <h2>Intellectual Property</h2>
-            <p>The App, including its design, features, and content (excluding your documents), is owned by Sun-i and is protected by intellectual property laws. You may not:</p>
+            <p>The App, including its design, features, and content (excluding your documents), is owned by Sun-i and protected by intellectual property laws. You may not:</p>
             <ul>
                 <li>Copy, modify, or distribute the App</li>
-                <li>Use our trademarks or branding without permission</li>
-                <li>Remove any copyright or proprietary notices</li>
+                <li>Use our trademarks without permission</li>
+                <li>Remove copyright notices</li>
             </ul>
         </div>
 
         <div class="card">
             <h2>Disclaimer of Warranties</h2>
-            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
+            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, INCLUDING:</p>
             <ul>
                 <li>Warranties of merchantability</li>
                 <li>Fitness for a particular purpose</li>
-                <li>Non-infringement</li>
-                <li>Accuracy or reliability of AI analysis results</li>
+                <li>Accuracy or reliability of AI analysis</li>
+                <li>Uninterrupted or error-free operation</li>
             </ul>
-            <p>We do not warrant that the App will be uninterrupted, error-free, or completely secure.</p>
+            <div class="warning">
+                <strong>BETA SOFTWARE:</strong> As a beta product, the app may contain defects and is provided for testing purposes. Use at your own risk.
+            </div>
         </div>
 
         <div class="card">
             <h2>Limitation of Liability</h2>
             <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, SUN-I SHALL NOT BE LIABLE FOR:</p>
             <ul>
-                <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+                <li>Any indirect, incidental, special, or consequential damages</li>
                 <li>Loss of profits, data, or business opportunities</li>
-                <li>Any damages arising from reliance on AI analysis results</li>
-                <li>Any damages resulting from unauthorized access to your documents</li>
+                <li>Damages from reliance on AI analysis results</li>
+                <li>Any decisions made based on app analysis</li>
+                <li>Contract disputes or legal matters where AI analysis was used</li>
+                <li>Data loss or security breaches</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Data and Privacy</h2>
-            <p>Your use of the App is also governed by our <a href="privacy-policy.html" style="color: #667eea;">Privacy Policy</a>, which describes how we handle your data.</p>
-            <p>Key points:</p>
+            <h2>Third-Party Services</h2>
+            <p>The App uses third-party services that have their own terms:</p>
             <ul>
-                <li>Documents are stored locally on your device</li>
-                <li>You are responsible for backing up your documents</li>
-                <li>Deleting the App will delete all locally stored documents</li>
+                <li><strong>Google Gemini AI:</strong> <a href="https://policies.google.com/terms">Google Terms of Service</a></li>
+                <li><strong>Firebase:</strong> <a href="https://firebase.google.com/terms">Firebase Terms</a></li>
             </ul>
+            <p>Your use of these services is subject to their respective terms and policies.</p>
         </div>
 
         <div class="card">
             <h2>App Updates</h2>
-            <p>We may release updates to the App from time to time. These updates may:</p>
+            <p>We may release updates that:</p>
             <ul>
-                <li>Add new features or functionality</li>
+                <li>Add or remove features</li>
                 <li>Fix bugs or security issues</li>
-                <li>Modify or remove existing features</li>
+                <li>Change app functionality</li>
             </ul>
-            <p>We recommend keeping the App updated for the best experience and security.</p>
+            <p>We recommend keeping the App updated for security and best experience.</p>
         </div>
 
         <div class="card">
             <h2>Termination</h2>
-            <p>We reserve the right to terminate or suspend your access to the App at any time, without notice, for conduct that we believe:</p>
+            <p>We may terminate or suspend access to the App for:</p>
             <ul>
-                <li>Violates these Terms</li>
-                <li>Is harmful to other users or third parties</li>
-                <li>Is fraudulent or illegal</li>
+                <li>Violating these Terms</li>
+                <li>Fraudulent or illegal activity</li>
+                <li>Any reason at our discretion</li>
             </ul>
-            <p>You may stop using the App at any time by uninstalling it from your device.</p>
+            <p>You may stop using the App at any time by uninstalling it.</p>
         </div>
 
         <div class="card">
             <h2>Changes to Terms</h2>
-            <p>We may update these Terms from time to time. We will notify you of any material changes by:</p>
-            <ul>
-                <li>Posting the new Terms in the App</li>
-                <li>Updating the "Last Updated" date</li>
-            </ul>
-            <p>Your continued use of the App after changes constitutes acceptance of the new Terms.</p>
+            <p>We may update these Terms. Changes will be posted here with an updated date. Continued use constitutes acceptance of new Terms.</p>
         </div>
 
         <div class="card">
             <h2>Governing Law</h2>
-            <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
+            <p>These Terms are governed by applicable laws, without regard to conflict of law principles.</p>
+        </div>
+
+        <div class="card">
+            <h2>Severability</h2>
+            <p>If any provision of these Terms is found unenforceable, the remaining provisions will continue in effect.</p>
         </div>
 
         <div class="card">
             <h2>Contact Information</h2>
-            <p>If you have any questions about these Terms, please contact us at:</p>
+            <p>Questions about these Terms? Contact us at:</p>
             <p><strong>Email:</strong> apex.by.manish@gmail.com</p>
         </div>
 
-        <p class="updated">Last Updated: January 11, 2026</p>
+        <p class="updated">Last Updated: January 11, 2025</p>
     </div>
 </body>
 </html>

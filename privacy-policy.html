@@ -13,13 +13,21 @@
             line-height: 1.7;
         }
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
         }
         .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .header p { opacity: 0.9; font-size: 1.1rem; }
+        .beta-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -33,7 +41,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
         h2 {
-            color: #667eea;
+            color: #FF6B35;
             font-size: 1.5rem;
             margin-bottom: 20px;
             padding-bottom: 10px;
@@ -46,8 +54,15 @@
         }
         li { margin-bottom: 10px; }
         .highlight {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            border-left: 4px solid #667eea;
+            background: linear-gradient(135deg, #FF8C4215 0%, #FF6B3515 100%);
+            border-left: 4px solid #FF6B35;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
             padding: 20px;
             border-radius: 0 12px 12px 0;
             margin: 20px 0;
@@ -55,7 +70,7 @@
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            color: #667eea;
+            color: #FF6B35;
             text-decoration: none;
             font-weight: 600;
         }
@@ -66,101 +81,182 @@
             font-size: 0.9rem;
             margin-top: 40px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #f9f9f9;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Privacy Policy</h1>
         <p>Sun-i Document Scanner</p>
+        <span class="beta-badge">BETA VERSION</span>
     </div>
 
     <div class="container">
         <a href="index.html" class="back-link">&larr; Back to Home</a>
 
         <div class="card">
-            <h2>Our Commitment to Your Privacy</h2>
+            <h2>Overview</h2>
             <div class="highlight">
-                <strong>Sun-i is designed with privacy at its core.</strong> Your documents never leave your device. We do not collect, store, or transmit any of your personal data or scanned documents to external servers.
+                <strong>Sun-i</strong> is a document scanning app with AI-powered analysis. This policy explains what data we collect, how we use it, and your rights regarding your information.
             </div>
+            <p>Sun-i is currently in <strong>Beta</strong>. Features and data practices may change as we improve the app.</p>
         </div>
 
         <div class="card">
-            <h2>Information We Do NOT Collect</h2>
-            <p>Sun-i does not collect:</p>
+            <h2>Information We Collect</h2>
+
+            <h3 style="margin-top: 20px; color: #333;">1. Document Data (AI Analysis)</h3>
+            <div class="warning">
+                <strong>Important:</strong> When you use the AI analysis feature, your document images and text are sent to Google's Gemini AI service for processing.
+            </div>
             <ul>
-                <li>Your scanned documents or images</li>
-                <li>Personal identification information</li>
-                <li>Location data</li>
-                <li>Contact information</li>
-                <li>Usage analytics or tracking data</li>
-                <li>Device identifiers for advertising</li>
+                <li>Document images are transmitted securely to Gemini AI</li>
+                <li>Analysis is performed by Google's AI service</li>
+                <li>Google may process this data according to their privacy policy</li>
+                <li>We do not permanently store your documents on our servers</li>
+            </ul>
+
+            <h3 style="margin-top: 30px; color: #333;">2. Analytics Data (Firebase)</h3>
+            <p>We use Firebase Analytics to understand how the app is used:</p>
+            <table>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>App usage events</td>
+                    <td>Improve features</td>
+                </tr>
+                <tr>
+                    <td>Screen views</td>
+                    <td>Understand user flow</td>
+                </tr>
+                <tr>
+                    <td>Device type</td>
+                    <td>Optimize performance</td>
+                </tr>
+                <tr>
+                    <td>App version</td>
+                    <td>Track updates</td>
+                </tr>
+                <tr>
+                    <td>Crash reports</td>
+                    <td>Fix bugs</td>
+                </tr>
+            </table>
+
+            <h3 style="margin-top: 30px; color: #333;">3. Local Data</h3>
+            <p>The following data is stored only on your device:</p>
+            <ul>
+                <li>Scanned document images</li>
+                <li>AI analysis results/reports</li>
+                <li>App preferences (language, theme)</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Local Data Storage</h2>
-            <p>All data processed by Sun-i is stored exclusively on your device:</p>
-            <ul>
-                <li><strong>Scanned Documents:</strong> Stored locally in your device's secure storage</li>
-                <li><strong>Analysis Reports:</strong> Generated and stored locally on your device</li>
-                <li><strong>App Preferences:</strong> Language settings and theme preferences are stored locally</li>
-            </ul>
-            <p>You have full control over your data. You can delete any document or all app data at any time through the app or your device settings.</p>
-        </div>
+            <h2>Third-Party Services</h2>
+            <p>Sun-i uses the following third-party services:</p>
 
-        <div class="card">
-            <h2>AI Document Analysis</h2>
-            <p>Sun-i uses AI technology to analyze your documents and provide insights:</p>
+            <h3 style="margin-top: 20px; color: #333;">Google Gemini AI</h3>
             <ul>
-                <li>Document analysis is performed to help you understand your documents better</li>
-                <li>AI analysis may involve sending document data to secure AI services for processing</li>
-                <li>We use industry-standard encryption for any data transmission</li>
-                <li>No document content is permanently stored on external servers</li>
+                <li>Used for document analysis</li>
+                <li>Documents are sent to Google's servers for processing</li>
+                <li>Subject to <a href="https://policies.google.com/privacy" style="color: #FF6B35;">Google's Privacy Policy</a></li>
+            </ul>
+
+            <h3 style="margin-top: 20px; color: #333;">Firebase (Google)</h3>
+            <ul>
+                <li>Analytics: Usage tracking and crash reporting</li>
+                <li>Remote Config: App configuration management</li>
+                <li>Subject to <a href="https://firebase.google.com/support/privacy" style="color: #FF6B35;">Firebase Privacy Policy</a></li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Camera and Photo Library Access</h2>
+            <h2>How We Use Your Data</h2>
+            <ul>
+                <li><strong>Document Analysis:</strong> To provide AI-powered insights about your documents</li>
+                <li><strong>Analytics:</strong> To improve app performance and user experience</li>
+                <li><strong>Remote Config:</strong> To manage app features and settings</li>
+                <li><strong>Crash Reports:</strong> To identify and fix bugs</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Data Retention</h2>
+            <ul>
+                <li><strong>Local Data:</strong> Stored until you delete it or uninstall the app</li>
+                <li><strong>Analytics Data:</strong> Retained by Firebase according to their policies (typically 14 months)</li>
+                <li><strong>AI Processing:</strong> Document data is processed by Gemini AI but not permanently stored by us</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Camera and Photo Library</h2>
             <p>Sun-i requires access to:</p>
             <ul>
-                <li><strong>Camera:</strong> To scan documents using your device's camera</li>
-                <li><strong>Photo Library:</strong> To import existing photos for scanning and to save scanned documents</li>
+                <li><strong>Camera:</strong> To scan documents</li>
+                <li><strong>Photo Library:</strong> To import and save documents</li>
             </ul>
-            <p>These permissions are used solely for the app's document scanning functionality. We do not access your photos or camera for any other purpose.</p>
+            <p>These permissions are used solely for document scanning functionality.</p>
         </div>
 
         <div class="card">
             <h2>No Account Required</h2>
-            <p>Sun-i does not require you to create an account or provide any personal information to use the app. You can start scanning documents immediately after installation.</p>
+            <p>Sun-i does not require you to create an account. You can use the app without providing personal information like email or name.</p>
+        </div>
+
+        <div class="card">
+            <h2>Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Delete Local Data:</strong> Remove documents and reports within the app</li>
+                <li><strong>Uninstall:</strong> Remove all local data by uninstalling the app</li>
+                <li><strong>Opt-out of Analytics:</strong> Disable analytics through iOS Settings > Privacy</li>
+                <li><strong>Request Information:</strong> Contact us to know what data we have</li>
+            </ul>
         </div>
 
         <div class="card">
             <h2>Data Security</h2>
-            <p>We implement appropriate security measures to protect your data:</p>
             <ul>
-                <li>All local data is protected by iOS's built-in security features</li>
-                <li>Documents are stored using iOS Data Protection</li>
-                <li>No cloud backup of sensitive document data</li>
+                <li>All data transmission uses HTTPS encryption</li>
+                <li>Local data is protected by iOS security features</li>
+                <li>We do not sell your data to third parties</li>
             </ul>
         </div>
 
         <div class="card">
             <h2>Children's Privacy</h2>
-            <p>Sun-i is not directed at children under 13. We do not knowingly collect any information from children under 13 years of age.</p>
+            <p>Sun-i is not intended for children under 13. We do not knowingly collect data from children under 13.</p>
         </div>
 
         <div class="card">
             <h2>Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+            <p>We may update this policy as the app evolves. Changes will be posted here with an updated date. Continued use of the app constitutes acceptance of the updated policy.</p>
         </div>
 
         <div class="card">
             <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p>Questions about this Privacy Policy? Contact us at:</p>
             <p><strong>Email:</strong> apex.by.manish@gmail.com</p>
         </div>
 
-        <p class="updated">Last Updated: January 11, 2026</p>
+        <p class="updated">Last Updated: January 11, 2025</p>
     </div>
 </body>
 </html>
