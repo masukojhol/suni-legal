@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun-i - Smart Document Scanner with AI Analysis</title>
+    <meta name="description" content="Scan contracts and documents instantly. AI analyzes employment, housing, and financial agreements to identify red flags and extract key terms.">
+    <meta property="og:title" content="Sun-i - Smart Document Scanner">
+    <meta property="og:description" content="Scan contracts, understand key terms, and spot potential issues before you sign.">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a0f0a 0%, #2d1810 50%, #1a0f0a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 20px 60px rgba(255, 107, 53, 0.4);
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            color: #FF8C42;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            max-width: 500px;
+            margin-bottom: 40px;
+        }
+        .app-store-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 60px;
+        }
+        .app-store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+        .features {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #ffffff;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%);
+            border: 1px solid #2a2a2a;
+            border-radius: 20px;
+            padding: 35px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #FF6B35;
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .feature-card p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        .document-types {
+            background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+            padding: 80px 20px;
+        }
+        .document-types h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+        .type-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .pill {
+            background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .footer {
+            background: #0a0a0a;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #FF8C42;
+        }
+        .footer p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #FF8C42;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .tagline { font-size: 1.2rem; }
+            .features h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="logo">S</div>
+        <h1>Sun-i</h1>
+        <p class="tagline">Smart Document Scanner</p>
+        <p class="subtitle">Scan contracts, understand key terms, and spot potential issues before you sign. AI-powered analysis for employment, housing, and financial documents.</p>
+        <a href="#" class="app-store-btn">Coming Soon on App Store</a>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📷</div>
+                <h3>Smart Scanning</h3>
+                <p>Real-time edge detection automatically finds document boundaries. Perspective correction straightens tilted photos instantly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Analysis</h3>
+                <p>Extracts key information from contracts and identifies potential red flags. Get a safety score to make informed decisions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Quality Checks</h3>
+                <p>Automatic detection of blur, brightness issues, and glare ensures your scans are always readable and clear.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3>PDF Export</h3>
+                <p>Export your scanned documents and analysis reports to PDF for easy sharing and record keeping.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌏</div>
+                <h3>Multilingual</h3>
+                <p>Supports documents in Korean, English, and Japanese. Perfect for expats and international workers.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Private & Secure</h3>
+                <p>Your documents stay on your device. Scan and analyze with confidence knowing your data is protected.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="document-types">
+        <h2>Supported Document Types</h2>
+        <div class="type-pills">
+            <span class="pill">Employment Contracts</span>
+            <span class="pill">Housing Leases</span>
+            <span class="pill">Gym Memberships</span>
+            <span class="pill">Telecom Contracts</span>
+            <span class="pill">Bank Documents</span>
+            <span class="pill">General Documents</span>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms and Conditions</a>
+        </div>
+        <p>&copy; 2026 Sun-i. All rights reserved.</p>
+        <div class="contact">
+            <p>Support: <a href="mailto:apex.by.manish@gmail.com">apex.by.manish@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
